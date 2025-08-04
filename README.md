@@ -1,0 +1,2 @@
+# Furnity
+Stack: NextJS, TailwindCSS
