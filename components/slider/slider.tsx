@@ -1,34 +1,59 @@
-import { FC, ReactNode } from "react";
-import Image from "next/image";
+"use client";
+import { useState } from "react";
+import { ProductCard } from "../product-card";
+import { ArrowActionIcon } from "../action-icons";
+import { products } from "./mock";
 
-type TSlider = {
-  children?: ReactNode;
-};
+const Slider = () => {
+  const [translateX, setTranslateX] = useState(0);
+  console.log(translateX);
 
-const Slider: FC<TSlider> = () => {
+  const items = products.map((item) => (
+    <ProductCard
+      key={item.id}
+      category={item.category}
+      image={item.image}
+      label={item.label}
+      price={item.price}
+    />
+  ));
+
+  const translateLeftHandler = () => {
+    if (translateX > 0) {
+      setTranslateX(0);
+    }
+  };
+
+  const translateRightHandler = () => {
+    if (translateX === 0) {
+      setTranslateX(1240);
+    }
+  };
+
   return (
-    <div className="relative pt-[42px] w-[268px] ">
-      <div className="grid grid-rows-[240px_252px] overflow-hidden w-full h-full rounded-3xl">
-        <Image
-          src="/image-1.png"
-          width={220}
-          height={220}
-          alt="image-1"
-          className="absolute top-[-6px] left-6"
+    <section className="relative">
+      <div className="absolute top-[220px] left-[-25px] z-10">
+        <ArrowActionIcon
+          direction="left"
+          clickHandler={translateLeftHandler}
+          isDisabled={translateX === 0}
         />
-        <div className="bg-(--gray-0)" />
-        <div className="flex flex-col pt-[14px] pl-[21px] pr-[21px] gap-[20px] bg-(--white)">
-          <section>
-            <span>Chair</span>
-            <h3>Sakarias Armchair</h3>
-          </section>
-          <section className="flex flex-col-2 justify-between">
-            <span>$ 392</span>
-            <button type="button">+</button>
-          </section>
+      </div>
+      <div className="overflow-hidden">
+        <div
+          className={`flex flex-row gap-[42px] translate-x-[-${translateX}px] transition ease-in-out duration-1250`}
+        >
+          {items}
         </div>
       </div>
-    </div>
+      <div className="absolute top-[220px] right-[-25px] z-10">
+        <ArrowActionIcon
+          direction="right"
+          clickHandler={translateRightHandler}
+          isDisabled={translateX > 0}
+        />
+      </div>
+    </section>
   );
 };
 
