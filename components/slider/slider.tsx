@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import { ProductCard } from "../product-card";
-import { ArrowActionIcon } from "../action-icons";
 import { products } from "./mock";
+import { CircleButton } from "../buttons";
 
 const Slider = () => {
   const [translateX, setTranslateX] = useState(0);
@@ -44,20 +44,22 @@ const Slider = () => {
   return (
     <section className="relative">
       <div className="absolute top-[220px] left-[-25px] z-10">
-        <ArrowActionIcon
-          direction="left"
-          clickHandler={translateLeftHandler}
-          isDisabled={translateX === 0}
+        <CircleButton
+          variant="arrow-left"
+          disabled={translateX === 0}
+          onClick={translateLeftHandler}
+          shadow
         />
       </div>
       <div className="overflow-hidden">
         <div className={classesItems}>{items}</div>
       </div>
       <div className="absolute top-[220px] right-[-25px] z-10">
-        <ArrowActionIcon
-          direction="right"
-          clickHandler={translateRightHandler}
-          isDisabled={translateX > 0}
+        <CircleButton
+          variant="arrow-right"
+          disabled={translateX > 0}
+          onClick={translateRightHandler}
+          shadow
         />
       </div>
     </section>
