@@ -36,10 +36,10 @@ const CircleButton: FC<TCircleButton> = ({
     !color || color === "white"
       ? "bg-white"
       : color === "accent"
-      ? "bg-(--accent-color)"
+      ? "bg-(--accent-color) text-white"
       : color === "black"
-      ? "bg-(--foreground)"
-      : "bg-(--watermelon-color)";
+      ? "bg-(--foreground) text-white"
+      : "bg-(--watermelon-color) text-white";
 
   const buttonClasses = [
     "flex",
