@@ -6,7 +6,6 @@ import { products } from "./mock";
 
 const Slider = () => {
   const [translateX, setTranslateX] = useState(0);
-  console.log(translateX);
 
   const items = products.map((item) => (
     <ProductCard
@@ -30,6 +29,18 @@ const Slider = () => {
     }
   };
 
+  const classesItems = [
+    "flex",
+    "flex-row",
+    "gap-[42px]",
+    translateX && "translate-x-[-1240px]",
+    "transition",
+    "ease-in-out",
+    "duration-1250",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
     <section className="relative">
       <div className="absolute top-[220px] left-[-25px] z-10">
@@ -40,11 +51,7 @@ const Slider = () => {
         />
       </div>
       <div className="overflow-hidden">
-        <div
-          className={`flex flex-row gap-[42px] translate-x-[-${translateX}px] transition ease-in-out duration-1250`}
-        >
-          {items}
-        </div>
+        <div className={classesItems}>{items}</div>
       </div>
       <div className="absolute top-[220px] right-[-25px] z-10">
         <ArrowActionIcon
