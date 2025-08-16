@@ -4,4 +4,5 @@ export * from "./search";
 export * from "./basket";
 export * from "./slider";
 export * from "./product-card";
-export * from "./action-icons";
+export * from "./buttons";
+export * from "./icons";
