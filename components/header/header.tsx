@@ -1,4 +1,5 @@
 import { FC, ReactNode } from "react";
+import { Button } from "../buttons";
 
 type THeader = {
   search?: ReactNode;
@@ -45,12 +46,7 @@ const Header: FC<THeader> = ({ children, search, basket, slider }) => {
           we have helped more than 1000+ people to give perfect comfort to the
           interior of their home
         </p>
-        <button
-          type="button"
-          className="rounded-full w-[177px] h-[60px] bg-(--accent-color) text-(length:--text-size-md-1) font-bold text-(--background)"
-        >
-          Find Produk
-        </button>
+        <Button label="Find Produk" color="accent" size="lg" />
       </section>
       <section className="w-[1240px] h-full pl-[20px] pr-[20px] mt-[40px]">
         {slider}
