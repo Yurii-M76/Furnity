@@ -50,7 +50,7 @@ const CircleButton: FC<TCircleButton> = ({
     "justify-center",
     "rounded-[50%]",
     "shrink-0",
-    shadow && "shadow-2xs",
+    shadow && "shadow-[0_7px_19px_rgba(0,0,0,0.06)]",
     disabledClasses,
     colorClass,
   ]
