@@ -9,7 +9,7 @@ type THeader = {
 
 const Header: FC<THeader> = ({ children, slider }) => {
   return (
-    <header className="grid grid-cols-1 grid-rows-[192px_262px_492px] items-start justify-items-center w-full h-full bg-top bg-no-repeat bg-[url(/cover.png)] font-family">
+    <header className="grid grid-cols-1 grid-rows-[192px_274px_480px] items-start justify-items-center w-full h-full bg-top bg-no-repeat bg-[url(/cover.png)] font-family">
       <section className="flex flex-row flex-none items-top justify-between mt-[24px] w-[1200px] h-full gap-[8px]">
         <div className="flex flex-row flex-none">{iconLogo}</div>
         {children}
@@ -18,19 +18,19 @@ const Header: FC<THeader> = ({ children, slider }) => {
           {iconBasket}
         </div>
       </section>
-      <section className="flex flex-col flex-none items-center justify-center text-center w-[645px] h-full gap-[14]">
+      <section className="flex flex-col flex-none items-center justify-center text-center w-[645px] h-full gap-[6px]">
         <h1>
           Offer products to make your interior{" "}
           <span className="text-(--accent-color)">Minimalist.</span>
         </h1>
-        <p className="w-[405px] text-(--text-size-md-1) font-normal">
+        <p className="w-[405px] text-[1.12rem] font-normal mb-[16px]">
           we have helped more than 1000+ people to give perfect comfort to the
           interior of their home
         </p>
-        <Button label="Find Produk" color="accent" size="lg" />
+          <Button label="Find Produk" color="accent" size="lg" />
       </section>
       {slider && (
-        <section className="w-[1240px] h-full pl-[20px] pr-[20px] mt-[40px]">
+        <section className="w-[1240px] h-full pl-[20px] pr-[20px] mt-[30px]">
           {slider}
         </section>
       )}
