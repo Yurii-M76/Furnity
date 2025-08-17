@@ -20,8 +20,8 @@ const ProductCard: FC<Omit<TProduct, "id">> = ({
           className="absolute top-[-6px] left-6"
         />
         <div className="bg-(--gray-0)" />
-        <div className="flex flex-col pt-[14px] pl-[21px] pr-[21px] gap-[30px] bg-(--white)">
-          <section className="flex flex-col gap-[6px]">
+        <div className="flex flex-col pt-[14px] pl-[21px] pr-[21px] gap-[30px] bg-white">
+          <section className="flex flex-col">
             <span className="text-[16.5px] text-(--gray-2)">{category}</span>
             <h3>{label}</h3>
           </section>
