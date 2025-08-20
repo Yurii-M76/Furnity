@@ -30,7 +30,7 @@ const Header: FC<THeader> = ({ children, slider }) => {
           <Button label="Find Produk" color="accent" size="lg" />
       </section>
       {slider && (
-        <section className="w-[1240px] h-full pl-[20px] pr-[20px] mt-[30px]">
+        <section className="w-[1240px] pl-[20px] pr-[20px] mt-[30px]">
           {slider}
         </section>
       )}
