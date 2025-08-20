@@ -14,6 +14,7 @@
   --accent-color: #f6973f;
   --watermelon-color: #ef4358;
   --gray-0: #fafafa;
+  --gray-1: #e0e0e0;
   --gray-2: #8d8d8d;
   --gray-3: rgba(29, 31, 35, 0.7);
 }
@@ -42,21 +43,21 @@ body {
   background: var(--background);
 }
 
-h1 {
+h1, h2 {
   color: var(--foreground);
   font-weight: 700;
   font-size: var(--text-size-xxl);
   line-height: 125%;
 }
 
-h2 {
+h3 {
   color: var(--foreground);
   font-family: var(--font-family);
   font-weight: 600;
   font-size: var(--text-size-lg-1);
 }
 
-h3 {
+h4 {
   color: var(--foreground);
   font-weight: 600;
   font-size: var(--text-size-lg-0);
