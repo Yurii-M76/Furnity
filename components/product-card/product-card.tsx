@@ -23,7 +23,7 @@ const ProductCard: FC<Omit<TProduct, "id">> = ({
         <div className="flex flex-col pt-[14px] pl-[21px] pr-[21px] gap-[30px] bg-white">
           <section className="flex flex-col">
             <span className="text-[16.5px] text-(--gray-2)">{category}</span>
-            <h3>{label}</h3>
+            <h4>{label}</h4>
           </section>
           <section className="flex items-center justify-between">
             <div className="flex flex-row items-top gap-[3px] text-[21.33px] font-semibold">

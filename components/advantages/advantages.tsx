@@ -20,21 +20,21 @@ const Advantages: FC<TAdvantages> = () => {
           <div className="flex flex-col gap-[15px]">
             {iconPackage}
             <div className="flex flex-col gap-[5px]">
-              <h2 className="">Fast and safe delivery</h2>
+              <h3 className="">Fast and safe delivery</h3>
               please login and buy our products, safe delivery guaranteed
             </div>
           </div>
           <div className="flex flex-col gap-[15px]">
             {iconLoaderCircle}
             <div className="flex flex-col gap-[5px]">
-              <h2 className="">Quick and easy returns</h2>
+              <h3 className="">Quick and easy returns</h3>
               Items that do not match we are ready to replace, please return
             </div>
           </div>
           <div className="flex flex-col gap-[15px]">
             {iconUserPin}
             <div className="flex flex-col gap-[5px]">
-              <h2 className="">24 hour customer service</h2>
+              <h3 className="">24 hour customer service</h3>
               Our customer service is ready to serve you at any time, dont
               hesitate to contact us
             </div>
@@ -42,7 +42,7 @@ const Advantages: FC<TAdvantages> = () => {
           <div className="flex flex-col gap-[15px]">
             {iconTargetLock}
             <div className="flex flex-col gap-[5px]">
-              <h2 className="">the price match is very fitting</h2>
+              <h3 className="">the price match is very fitting</h3>
               The price of the products we offer is very in accordance with the
               quality of the goods
             </div>
@@ -57,6 +57,7 @@ const Advantages: FC<TAdvantages> = () => {
           width={550}
           height={550}
           style={{ objectFit: "cover" }}
+          className="hover:scale-110 transition ease-in-out duration-1250"
         />
       </div>
     </section>
