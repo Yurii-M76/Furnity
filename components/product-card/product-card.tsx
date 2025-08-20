@@ -11,7 +11,7 @@ const ProductCard: FC<Omit<TProduct, "id">> = ({
 }) => {
   return (
     <div className="relative pt-[42px] w-[268px] shrink-0 font-family">
-      <div className="grid grid-rows-[240px_252px] overflow-hidden w-full h-full rounded-3xl">
+      <div className="grid grid-rows-[240px_252px] overflow-hidden w-full h-[442px] rounded-3xl">
         <Image
           src={image}
           width={220}
