@@ -5,14 +5,19 @@ type TButton = {
   label: string;
   size?: Exclude<TSizes, "sm">;
   color?: Exclude<TColors, "white">;
+  active?: boolean;
   disabled?: boolean;
 };
 
-const Button: FC<TButton> = ({ label, size, color, disabled }) => {
+const Button: FC<TButton> = ({ label, size, color, active, disabled }) => {
   const colorClass =
     !color || color === "accent"
       ? "bg-(--accent-color)"
       : color === "black"
+      ? "bg-(--foreground)"
+      : color === "transparent" && !active
+      ? "bg-transparent text-(--foreground) hover:bg-(--gray-1) transition ease-in-out duration-100"
+      : color === "transparent" && active
       ? "bg-(--foreground)"
       : "bg-(--watermelon-color)";
 
