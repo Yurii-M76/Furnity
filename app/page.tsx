@@ -1,4 +1,4 @@
-import { Advantages, Header, Navigation, Slider } from "@/components";
+import { Advantages, Header, Navigation, Products, Slider } from "@/components";
 
 export default function Home() {
   return (
@@ -6,8 +6,9 @@ export default function Home() {
       <Header slider={<Slider />}>
         <Navigation />
       </Header>
-      <main className="flex items-start justify-center w-full h-[700px] font-family text-(length:--text-size-xxl)">
+      <main className="flex flex-col w-[1200px] items-start justify-center gap-[55px] font-family text-(length:--text-size-md-1)">
         <Advantages />
+        <Products />
       </main>
       <footer className="">footer</footer>
     </div>
