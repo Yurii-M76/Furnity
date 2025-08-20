@@ -6,3 +6,4 @@ export * from "./slider";
 export * from "./product-card";
 export * from "./buttons";
 export * from "./icons";
+export * from "./advantages";
