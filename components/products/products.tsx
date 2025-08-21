@@ -1,5 +1,7 @@
 import { FC, ReactNode } from "react";
 import { Tabs } from "../tabs";
+import { ProductCard } from "../product-card";
+import { products } from "@/mocks";
 
 type TProducts = {
   children?: ReactNode;
@@ -15,6 +17,16 @@ const mockTabs = [
 ];
 
 const Products: FC<TProducts> = () => {
+  const items = products.map((item) => (
+    <ProductCard
+      key={item.id}
+      category={item.category}
+      image={item.image}
+      label={item.label}
+      price={item.price}
+    />
+  ));
+
   return (
     <section className="flex flex-col w-full items-center mt-[45px] gap-[50px]">
       <div className="flex flex-col items-center gap-[10px] mb-[9px]">
@@ -29,7 +41,7 @@ const Products: FC<TProducts> = () => {
         </div>
       </div>
       <Tabs tabs={mockTabs} />
-      <div>cards</div>
+      <div className="grid grid-cols-4 gap-x-[42px] gap-y-[20px]">{items}</div>
     </section>
   );
 };
