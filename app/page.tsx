@@ -1,4 +1,11 @@
-import { Advantages, Header, Navigation, Products, Slider } from "@/components";
+import {
+  Advantages,
+  CustomerReviews,
+  Header,
+  Navigation,
+  Products,
+  Slider,
+} from "@/components";
 
 export default function Home() {
   return (
@@ -6,9 +13,10 @@ export default function Home() {
       <Header slider={<Slider />}>
         <Navigation />
       </Header>
-      <main className="flex flex-col w-[1200px] items-start justify-center gap-[55px] font-family text-(length:--text-size-md-1)">
+      <main className="flex flex-col w-full items-center justify-center gap-[55px] font-family text-(length:--text-size-md-1)">
         <Advantages />
         <Products />
+        <CustomerReviews />
       </main>
       <footer className="">footer</footer>
     </div>

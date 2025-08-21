@@ -9,3 +9,4 @@ export * from "./icons";
 export * from "./advantages";
 export * from "./products";
 export * from "./tabs";
+export * from "./customer-reviews";
