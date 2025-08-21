@@ -7,7 +7,8 @@ export type TProduct = {
 };
 
 export enum productCategory {
-  CHAIRS = "стулья",
-  TABLES = "столы",
-  SOFAS = "диваны",
+  CHAIR = "Chair",
+  TABLE = "Table",
+  SOFA = "Sofa",
+  KITCHEN = "Kitchen"
 }
