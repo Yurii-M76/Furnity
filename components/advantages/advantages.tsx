@@ -14,7 +14,7 @@ type TAdvantages = {
 
 const Advantages: FC<TAdvantages> = () => {
   return (
-    <section className="flex flex-row w-[1200px] h-[569px] justify-between font-family text-(length:--text-size-md-1) text-(--gray-3)">
+    <section className="flex flex-row w-(--w-section) h-[569px] justify-between font-family text-(length:--text-size-md-1) text-(--gray-3)">
       <section className="flex flex-col items-start gap-[40px]">
         <div className="grid grid-cols-[235px_235px] grid-rows-[198px] items-start justify-items-start w-[547px] gap-[60px] shrink-0 flex-wrap text-lg">
           <div className="flex flex-col gap-[15px]">

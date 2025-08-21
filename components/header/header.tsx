@@ -10,7 +10,7 @@ type THeader = {
 const Header: FC<THeader> = ({ children, slider }) => {
   return (
     <header className="grid grid-cols-1 grid-rows-[192px_274px_480px] items-start justify-items-center w-full h-full bg-top bg-no-repeat bg-[url(/cover.png)] font-family">
-      <section className="flex flex-row flex-none items-top justify-between mt-[24px] w-[1200px] h-full gap-[8px]">
+      <section className="flex flex-row flex-none items-top justify-between mt-[24px] w-(--w-section) h-full gap-[8px]">
         <div className="flex flex-row flex-none">{iconLogo}</div>
         {children}
         <div className="flex flex-row flex-none justify-end gap-[36px]">
