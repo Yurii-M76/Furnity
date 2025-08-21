@@ -32,14 +32,15 @@ const CircleButton: FC<TCircleButton> = ({
     ? "cursor-pointer active:translate-y-[1px]"
     : "cursor-not-allowed text-gray-400";
 
-  const colorClass =
-    !color || color === "white"
-      ? "bg-white"
-      : color === "accent"
-      ? "bg-(--accent-color) text-white"
-      : color === "black"
-      ? "bg-(--foreground) text-white"
-      : "bg-(--watermelon-color) text-white";
+  const colorClass = disabled
+    ? "bg-[#313136]"
+    : !color || color === "white"
+    ? "bg-white"
+    : color === "accent"
+    ? "bg-(--accent-color) text-white"
+    : color === "black"
+    ? "bg-(--foreground) text-white"
+    : "bg-(--watermelon-color) text-white";
 
   const buttonClasses = [
     "flex",
