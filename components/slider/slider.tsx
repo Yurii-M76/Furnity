@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import { ProductCard } from "../product-card";
-import { products } from "./mock";
 import { CircleButton } from "../buttons";
+import { products } from "@/mocks";
 
 const Slider = () => {
   const [translateX, setTranslateX] = useState(0);
