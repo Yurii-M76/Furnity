@@ -10,3 +10,4 @@ export * from "./advantages";
 export * from "./products";
 export * from "./tabs";
 export * from "./customer-reviews";
+export * from "./contacts";

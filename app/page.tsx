@@ -1,5 +1,6 @@
 import {
   Advantages,
+  Contacts,
   CustomerReviews,
   Header,
   Navigation,
@@ -17,6 +18,7 @@ export default function Home() {
         <Advantages />
         <Products />
         <CustomerReviews />
+        <Contacts />
       </main>
       <footer className="">footer</footer>
     </div>
