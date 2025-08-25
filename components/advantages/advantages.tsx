@@ -58,6 +58,7 @@ const Advantages: FC<TAdvantages> = () => {
           height={550}
           style={{ objectFit: "cover" }}
           className="hover:scale-110 transition ease-in-out duration-1250"
+          loading="lazy"
         />
       </div>
     </section>
