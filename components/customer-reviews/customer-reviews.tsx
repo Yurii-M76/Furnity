@@ -11,7 +11,7 @@ const CustomerReviews = () => {
   const reviewsLength = customerReviews.length;
 
   return (
-    <section className="relative flex flex-row items-center justify-center text-white bg-(--black) w-full pt-[70px] pb-[70px]">
+    <section className="relative flex flex-row items-center justify-center text-white bg-(--black-color) w-full pt-[70px] pb-[70px]">
       <div className="absolute left-48 rotate-[-30deg] w-[172px] h-[897px] bg-white opacity-4" />
       <section className="flex flex-row items-center justify-between w-(--w-section)">
         <div className="flex flex-col w-[517px] gap-[50px]">
