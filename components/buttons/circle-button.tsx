@@ -28,19 +28,23 @@ const CircleButton: FC<TCircleButton> = ({
   disabled,
   onClick,
 }) => {
+  const transition = "transition ease-in-out duration-50";
+
   const disabledClasses = !disabled
     ? "cursor-pointer active:translate-y-[1px]"
     : "cursor-not-allowed text-gray-400";
 
   const colorClass = disabled
-    ? "bg-[#313136]"
+    ? variant === "bracket-left" || variant === "bracket-right"
+      ? "bg-[#313136]"
+      : "bg-white"
     : !color || color === "white"
-    ? "bg-white"
+    ? `bg-white hover:bg-(--gray-1) ${transition}`
     : color === "accent"
-    ? "bg-(--accent-color) text-white"
+    ? `bg-(--accent-color) hover:bg-(--accent-color-hover) ${transition} text-white`
     : color === "black"
-    ? "bg-(--foreground) text-white"
-    : "bg-(--watermelon-color) text-white";
+    ? `bg-(--foreground) hover:bg-(--foreground-hover) ${transition} text-white`
+    : `bg-(--watermelon-color) hover:bg-(--watermelon-color-hover) ${transition} text-white`;
 
   const buttonClasses = [
     "flex",

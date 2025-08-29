@@ -7,19 +7,29 @@ type TButton = {
   color?: Exclude<TColors, "white">;
   active?: boolean;
   disabled?: boolean;
+  onClick?: () => void;
 };
 
-const Button: FC<TButton> = ({ label, size, color, active, disabled }) => {
+const Button: FC<TButton> = ({
+  label,
+  size,
+  color,
+  active,
+  disabled,
+  onClick,
+}) => {
+  const transition = "transition ease-in-out duration-50";
+
   const colorClass =
     !color || color === "accent"
-      ? "bg-(--accent-color)"
+      ? `bg-(--accent-color) hover:bg-(--accent-color-hover) ${transition}`
       : color === "black"
-      ? "bg-(--foreground)"
+      ? `bg-(--foreground) hover:bg-(--foreground-hover) ${transition}`
       : color === "transparent" && !active
-      ? "bg-transparent text-(--foreground) hover:bg-(--gray-1) transition ease-in-out duration-100"
+      ? `bg-transparent text-(--foreground) hover:bg-(--gray-1) ${transition}`
       : color === "transparent" && active
-      ? "bg-(--foreground)"
-      : "bg-(--watermelon-color)";
+      ? `bg-(--foreground) hover:bg-(--foreground-hover) ${transition}`
+      : `bg-(--watermelon-color) hover:bg-(--watermelon-color-hover) ${transition}`;
 
   const sizeClass =
     !size || size === "lg"
@@ -43,7 +53,7 @@ const Button: FC<TButton> = ({ label, size, color, active, disabled }) => {
     .join(" ");
 
   return (
-    <button type="button" className={buttonClasses}>
+    <button type="button" className={buttonClasses} onClick={onClick}>
       {label}
     </button>
   );
