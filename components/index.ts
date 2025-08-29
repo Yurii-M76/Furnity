@@ -11,3 +11,5 @@ export * from "./products";
 export * from "./tabs";
 export * from "./customer-reviews";
 export * from "./contacts";
+export * from "./footer";
+export * from "./modal";
