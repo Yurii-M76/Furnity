@@ -28,7 +28,7 @@ const Products: FC<TProducts> = () => {
   ));
 
   return (
-    <section className="flex flex-col w-full items-center mt-[45px] gap-[50px]">
+    <section id="products" className="flex flex-col w-full items-center mt-[45px] gap-[50px]">
       <div className="flex flex-col items-center gap-[10px] mb-[9px]">
         <div className="w-[717px] text-center">
           <h2>Various collections of furniture to fill your interior</h2>
