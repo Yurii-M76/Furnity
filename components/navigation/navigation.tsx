@@ -7,7 +7,7 @@ type TNavigation = {
 const Navigation: FC<TNavigation> = () => {
   return (
     <nav>
-      <ul className="flex flex-row items-center justify-center gap-[50px] text-[14px] text-(--foreground-light)">
+      <ul className="flex flex-row items-center justify-center gap-[50px] text-[14px]">
         <li>Badroom</li>
         <li>Living Room</li>
         <li>Dining Room</li>
