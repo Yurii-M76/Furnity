@@ -1,8 +1,9 @@
 "use client";
 import { FC, ReactNode, useState } from "react";
-import { Button } from "../buttons";
-import { iconBasket, iconLogo, iconSearch } from "../icons";
+import { Logo } from "../logo";
 import { Modal } from "../modal";
+import { Button } from "../buttons";
+import { iconBasket } from "../icons";
 
 type THeader = {
   slider?: ReactNode;
@@ -14,11 +15,10 @@ const Header: FC<THeader> = ({ children, slider }) => {
 
   return (
     <header className="grid grid-cols-1 grid-rows-[192px_274px_480px] items-start justify-items-center w-full h-full bg-top bg-no-repeat bg-[url(/cover.png)] font-family">
-      <section className="flex flex-row flex-none items-top justify-between mt-[24px] w-(--w-section) h-full gap-[8px]">
-        <div className="flex flex-row flex-none">{iconLogo}</div>
+      <section className="flex flex-row flex-none items-top justify-between mt-[24px] w-(--w-section) gap-[8px]">
+        <Logo />
         {children}
         <div className="flex flex-row flex-none justify-end gap-[36px]">
-          {iconSearch}
           {iconBasket}
         </div>
       </section>
@@ -56,7 +56,11 @@ const Header: FC<THeader> = ({ children, slider }) => {
           reprehenderit dolore ea veniam non dolor irure elit ad. Tempor
           occaecat consequat aliquip cupidatat minim do deserunt.
         </p>
-        <Button label="close" size="md" onClick={() => setIsModalOpen(!isModalOpen)} />
+        <Button
+          label="close"
+          size="md"
+          onClick={() => setIsModalOpen(!isModalOpen)}
+        />
       </Modal>
     </header>
   );

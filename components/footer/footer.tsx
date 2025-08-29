@@ -1,5 +1,5 @@
 import { FC, ReactNode } from "react";
-import { iconLogo } from "../icons";
+import { Logo } from "../logo";
 
 type TFooter = {
   children?: ReactNode;
@@ -11,7 +11,7 @@ const Footer: FC<TFooter> = ({ children }) => {
   return (
     <footer className="flex flex-row w-full h-full bg-(--black-color)  items-top justify-center text-white">
       <section className="flex flex-row items-center justify-between w-[1200px]">
-        <div className="flex flex-row flex-none">{iconLogo}</div>
+        <Logo />
         {children}
         <div>@ {year} Furnity, All Rights Reserved</div>
       </section>
