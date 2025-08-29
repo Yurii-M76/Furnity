@@ -62,7 +62,7 @@ const Modal: FC<ModalProps> = ({
   if (!isVisible) return null;
 
   return createPortal(
-    <div className="fixed inset-0 z-50 flex items-center justify-center font-family">
+    <div id="modal" className="fixed inset-0 z-50 flex items-center justify-center font-family">
       {/* Overlay */}
       <div
         className={`fixed inset-0 bg-black transition-opacity duration-${duration} ${

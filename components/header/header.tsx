@@ -21,7 +21,7 @@ const Header: FC<THeader> = ({ children, slider }) => {
         {children}
         <div
           className="flex flex-row flex-none justify-end gap-[36px] hover:cursor-pointer"
-          onClick={() => setIsModalOpen(!isModalOpen)}
+          onClick={() => setIsModalOpen(true)}
         >
           {iconBasket}
         </div>
@@ -49,14 +49,14 @@ const Header: FC<THeader> = ({ children, slider }) => {
       )}
       <Modal
         isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(!isModalOpen)}
+        onClose={() => setIsModalOpen(false)}
         title="Basket"
       >
         <p>no products</p>
         <Button
           label="close"
           size="md"
-          onClick={() => setIsModalOpen(!isModalOpen)}
+          onClick={() => setIsModalOpen(false)}
         />
       </Modal>
     </header>

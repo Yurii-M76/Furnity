@@ -15,12 +15,12 @@ const Contacts = () => {
         <Button
           label="Contact us"
           color="accent"
-          onClick={() => setIsModalOpen(!isModalOpen)}
+          onClick={() => setIsModalOpen(true)}
         />
       </section>
       <Modal
         isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(!isModalOpen)}
+        onClose={() => setIsModalOpen(false)}
         title="Contacts"
       >
         <p>
@@ -35,7 +35,7 @@ const Contacts = () => {
         <Button
           label="close"
           size="md"
-          onClick={() => setIsModalOpen(!isModalOpen)}
+          onClick={() => setIsModalOpen(false)}
         />
       </Modal>
     </>
