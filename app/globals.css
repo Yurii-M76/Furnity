@@ -3,6 +3,7 @@
 :root {
   --background: #fafafa;
   --foreground: #1d1f23;
+  --foreground-hover: #2b2e34;
   --foreground-light: rgba(29, 31, 35, 0.7);
   --w-layout: 1440px;
   --w-section: 1200px;
@@ -13,11 +14,15 @@
   --text-size-lg-1: 24px;
   --text-size-xxl: 48px;
   --accent-color: #f6973f;
+  --accent-color-hover: #f58822;
   --watermelon-color: #ef4358;
+  --watermelon-color-hover: #ed273e;
   --gray-0: #fafafa;
   --gray-1: #e0e0e0;
   --gray-2: #8d8d8d;
   --gray-3: rgba(29, 31, 35, 0.7);
+  --black-color: #19191b;
+  --black-color-hover: #19191b;
 }
 
 @theme inline {
@@ -44,7 +49,8 @@ body {
   background: var(--background);
 }
 
-h1, h2 {
+h1,
+h2 {
   color: var(--foreground);
   font-weight: 700;
   font-size: var(--text-size-xxl);
