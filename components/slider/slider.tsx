@@ -43,7 +43,7 @@ const Slider = () => {
 
   return (
     <section className="relative">
-      <div className="absolute top-[214px] left-[-25px] z-10">
+      <div className="absolute top-[214px] left-[-25px] z-1">
         <CircleButton
           variant="arrow-left"
           disabled={translateX === 0}
@@ -54,7 +54,7 @@ const Slider = () => {
       <div className="overflow-hidden">
         <div className={classesItems}>{items}</div>
       </div>
-      <div className="absolute top-[214px] right-[-25px] z-10">
+      <div className="absolute top-[214px] right-[-25px] z-1">
         <CircleButton
           variant="arrow-right"
           disabled={translateX > 0}
