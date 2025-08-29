@@ -2,6 +2,7 @@ import {
   Advantages,
   Contacts,
   CustomerReviews,
+  Footer,
   Header,
   Navigation,
   Products,
@@ -10,7 +11,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="font-sans m-auto grid grid-rows-[981px_auto_113px] items-start justify-items-center gap-[30px] w-(--w-layout) bg-white">
+    <div className="relative font-sans m-auto grid grid-rows-[981px_auto_113px] items-start justify-items-center gap-[30px] w-(--w-layout) bg-white z-0">
       <Header slider={<Slider />}>
         <Navigation />
       </Header>
@@ -20,7 +21,9 @@ export default function Home() {
         <CustomerReviews />
         <Contacts />
       </main>
-      <footer className="">footer</footer>
+      <Footer>
+        <Navigation />
+      </Footer>
     </div>
   );
 }
