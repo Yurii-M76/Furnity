@@ -1,12 +1,14 @@
+"use client";
 import { FC, ReactNode } from "react";
 import Image from "next/image";
+import { Button } from "../buttons";
+import { scrollTo } from "@/utils/index";
 import {
   iconLoaderCircle,
   iconPackage,
   iconTargetLock,
   iconUserPin,
 } from "../icons";
-import { Button } from "../buttons";
 
 type TAdvantages = {
   children?: ReactNode;
@@ -48,7 +50,12 @@ const Advantages: FC<TAdvantages> = () => {
             </div>
           </div>
         </div>
-        <Button label="Start Shopping" color="watermelon" size="lg" />
+        <Button
+          label="Start Shopping"
+          color="watermelon"
+          size="lg"
+          onClick={() => scrollTo("#products")}
+        />
       </section>
       <div className="flex flex-row w-[487px] h-full shrink-0 rounded-[15px] overflow-hidden">
         <Image

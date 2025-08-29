@@ -3,6 +3,7 @@ import { FC, ReactNode, useState } from "react";
 import { Logo } from "../logo";
 import { Modal } from "../modal";
 import { Button } from "../buttons";
+import { scrollTo } from "@/utils";
 import { iconBasket } from "../icons";
 
 type THeader = {
@@ -18,7 +19,10 @@ const Header: FC<THeader> = ({ children, slider }) => {
       <section className="flex flex-row flex-none items-top justify-between mt-[24px] w-(--w-section) gap-[8px]">
         <Logo />
         {children}
-        <div className="flex flex-row flex-none justify-end gap-[36px]">
+        <div
+          className="flex flex-row flex-none justify-end gap-[36px] hover:cursor-pointer"
+          onClick={() => setIsModalOpen(!isModalOpen)}
+        >
           {iconBasket}
         </div>
       </section>
@@ -35,7 +39,7 @@ const Header: FC<THeader> = ({ children, slider }) => {
           label="Find Produk"
           color="accent"
           size="lg"
-          onClick={() => setIsModalOpen(!isModalOpen)}
+          onClick={() => scrollTo("#products")}
         />
       </section>
       {slider && (
@@ -46,16 +50,9 @@ const Header: FC<THeader> = ({ children, slider }) => {
       <Modal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(!isModalOpen)}
-        title="Find Produk"
+        title="Basket"
       >
-        <p>
-          ollit pariatur enim consectetur non ut consectetur culpa quis ut magna
-          consectetur. Aute ipsum proident et elit id occaecat deserunt elit
-          incididunt aliqua. Voluptate nulla aute ipsum sit proident eu non
-          ipsum aliquip ut minim esse. Laborum deserunt dolore duis ut magna
-          reprehenderit dolore ea veniam non dolor irure elit ad. Tempor
-          occaecat consequat aliquip cupidatat minim do deserunt.
-        </p>
+        <p>no products</p>
         <Button
           label="close"
           size="md"
